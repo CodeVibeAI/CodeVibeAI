@@ -1,0 +1,47 @@
+{
+  "name": "@codevibeai/core",
+  "version": "0.1.0",
+  "description": "Core services and APIs for CodeVibeAI",
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeVibeAI/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeVibeAI/theia/issues"
+  },
+  "homepage": "https://github.com/CodeVibeAI/theia",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "1.42.0",
+    "@theia/editor": "1.42.0",
+    "@theia/monaco": "1.42.0",
+    "@theia/workspace": "1.42.0",
+    "@theia/filesystem": "1.42.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "~4.5.5"
+  },
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/codevibeai-core-frontend-module",
+      "backend": "lib/node/codevibeai-core-backend-module"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

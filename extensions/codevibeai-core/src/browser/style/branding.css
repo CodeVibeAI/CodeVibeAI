@@ -1,0 +1,271 @@
+/*
+ * Copyright (c) 2023 CodeVibeAI Team and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0
+ */
+
+/* CodeVibeAI branding variables */
+:root {
+    --codevibeai-primary-color: #836fff;
+    --codevibeai-primary-color-hover: #9988ff;
+    --codevibeai-primary-color-active: #7252fa;
+    --codevibeai-secondary-color: #ff6e91;
+    --codevibeai-accent-color: #47cfff;
+    --codevibeai-focus-color: #f082ac;
+    
+    /* Dark theme specific */
+    --codevibeai-dark-bg: #1e1e2e;
+    --codevibeai-dark-bg-light: #292938;
+    --codevibeai-dark-bg-lighter: #313145;
+    --codevibeai-dark-fg: #f5f5f9;
+    --codevibeai-dark-shadow: rgba(0, 0, 0, 0.3);
+    
+    /* Light theme specific */
+    --codevibeai-light-bg: #f5f5f9;
+    --codevibeai-light-bg-dark: #e8e8ec;
+    --codevibeai-light-bg-darker: #dcdce0;
+    --codevibeai-light-fg: #1e1e2e;
+    --codevibeai-light-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* App shell branding */
+.codevibeai-shell {
+    background-color: var(--codevibeai-dark-bg);
+}
+
+.codevibeai-shell.theia-preload {
+    background-image: url('../assets/codevibeai-loading.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+.codevibeai-dark-theme .codevibeai-shell {
+    background-color: var(--codevibeai-dark-bg);
+    color: var(--codevibeai-dark-fg);
+}
+
+.codevibeai-light-theme .codevibeai-shell {
+    background-color: var(--codevibeai-light-bg);
+    color: var(--codevibeai-light-fg);
+}
+
+/* Status bar branding */
+.codevibeai-statusbar {
+    background-color: var(--codevibeai-primary-color) !important;
+    color: white !important;
+    height: 24px !important;
+    line-height: 24px !important;
+    font-size: 12px !important;
+}
+
+.codevibeai-dark-theme .codevibeai-statusbar {
+    border-top: 1px solid var(--codevibeai-dark-bg-lighter);
+}
+
+.codevibeai-light-theme .codevibeai-statusbar {
+    border-top: 1px solid var(--codevibeai-light-bg-darker);
+}
+
+.codevibeai-statusbar .codicon {
+    line-height: 24px !important;
+}
+
+/* Title bar branding */
+.codevibeai-shell .p-Widget.p-DockPanel-tabBar.theia-app-centers .p-TabBar-content {
+    background-color: var(--codevibeai-primary-color);
+    color: white;
+}
+
+.codevibeai-shell .theia-app-centers .p-TabBar.theia-app-centers .p-TabBar-tab {
+    background-color: var(--codevibeai-primary-color);
+    color: white;
+    opacity: 0.8;
+}
+
+.codevibeai-shell .theia-app-centers .p-TabBar.theia-app-centers .p-TabBar-tab.p-mod-current {
+    opacity: 1;
+}
+
+/* Tab bar branding */
+.codevibeai-tabbar {
+    border-bottom: 1px solid var(--codevibeai-primary-color-active);
+}
+
+.codevibeai-tabbar .p-TabBar-tab.p-mod-current {
+    border-top: 2px solid var(--codevibeai-primary-color);
+    color: var(--codevibeai-primary-color);
+}
+
+.codevibeai-dark-theme .codevibeai-tabbar .p-TabBar-tab.p-mod-current {
+    background-color: var(--codevibeai-dark-bg-light);
+}
+
+.codevibeai-light-theme .codevibeai-tabbar .p-TabBar-tab.p-mod-current {
+    background-color: var(--codevibeai-light-bg-dark);
+}
+
+/* Logo customization */
+.theia-icon.codevibeai-logo {
+    height: 28px;
+    margin-right: 12px;
+    margin-left: 4px;
+}
+
+/* Split panel customization */
+.codevibeai-split-panel {
+    background-color: transparent;
+}
+
+.codevibeai-dark-theme .codevibeai-split-panel .p-SplitPanel-handle {
+    background-color: var(--codevibeai-dark-bg-lighter);
+}
+
+.codevibeai-light-theme .codevibeai-split-panel .p-SplitPanel-handle {
+    background-color: var(--codevibeai-light-bg-darker);
+}
+
+/* Splash screen */
+.codevibeai-splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.codevibeai-splash-logo {
+    margin-bottom: 15px;
+}
+
+.codevibeai-splash-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.codevibeai-splash-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--codevibeai-primary-color);
+}
+
+.codevibeai-splash-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.codevibeai-splash-version {
+    font-size: 12px;
+    color: var(--codevibeai-secondary-color);
+}
+
+/* Custom dialog */
+.codevibeai-dialog {
+    border-top: 3px solid var(--codevibeai-primary-color);
+}
+
+.codevibeai-dialog .dialogTitle {
+    color: var(--codevibeai-primary-color);
+}
+
+.codevibeai-dialog .dialogControl.button.main {
+    background-color: var(--codevibeai-primary-color);
+    color: white;
+}
+
+.codevibeai-dialog .dialogControl.button.main:hover {
+    background-color: var(--codevibeai-primary-color-hover);
+}
+
+/* Activity bar customization */
+.codevibeai-dark-theme .p-TabBar.theia-app-sides {
+    background-color: var(--codevibeai-dark-bg);
+}
+
+.codevibeai-light-theme .p-TabBar.theia-app-sides {
+    background-color: var(--codevibeai-light-bg);
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tab.p-mod-current {
+    color: var(--codevibeai-primary-color);
+}
+
+/* Focus border customization */
+.codevibeai-shell *:focus {
+    outline-color: var(--codevibeai-focus-color) !important;
+}
+
+/* Progress bar customization */
+.codevibeai-shell .progress-bar {
+    background-color: var(--codevibeai-primary-color) !important;
+}
+
+/* Quick input customization */
+.monaco-quick-input-widget {
+    border-top: 2px solid var(--codevibeai-primary-color) !important;
+}
+
+.codevibeai-dark-theme .monaco-quick-input-widget .monaco-list .monaco-list-row.focused {
+    background-color: var(--codevibeai-dark-bg-lighter) !important;
+    color: var(--codevibeai-primary-color) !important;
+}
+
+.codevibeai-light-theme .monaco-quick-input-widget .monaco-list .monaco-list-row.focused {
+    background-color: var(--codevibeai-light-bg-darker) !important;
+    color: var(--codevibeai-primary-color) !important;
+}
+
+/* Scrollbar customization */
+.codevibeai-shell ::-webkit-scrollbar-thumb {
+    background-color: var(--codevibeai-primary-color-active);
+}
+
+.codevibeai-shell ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--codevibeai-primary-color);
+}
+
+/* Button customization */
+.codevibeai-shell .theia-button.main {
+    background-color: var(--codevibeai-primary-color);
+    color: white;
+}
+
+.codevibeai-shell .theia-button.main:hover {
+    background-color: var(--codevibeai-primary-color-hover);
+}
+
+/* Menu customization */
+.codevibeai-shell .p-Menu {
+    border-top: 2px solid var(--codevibeai-primary-color);
+}
+
+.codevibeai-shell .p-Menu-item.p-mod-active {
+    background-color: var(--codevibeai-primary-color);
+    color: white;
+}
+
+/* View container title customization */
+.codevibeai-shell .theia-view-container-title-label {
+    color: var(--codevibeai-primary-color);
+}
+
+/* Notification customization */
+.codevibeai-shell .theia-notification-center .theia-notification-list-item.expanded {
+    border-left: 3px solid var(--codevibeai-primary-color);
+}
+
+.codevibeai-shell .theia-notification-center .theia-notification-list-item .notification-item-label > p {
+    color: var(--codevibeai-primary-color);
+}

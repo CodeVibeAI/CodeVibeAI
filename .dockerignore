@@ -1,0 +1,41 @@
+# Exclude development files and directories
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.git
+.github
+.vscode
+.husky
+.eslintcache
+.eslintrc.js
+.prettierrc.js
+.editorconfig
+.gitignore
+.gitattributes
+.npmrc
+coverage
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/*.stories.tsx
+**/__tests__
+**/__mocks__
+jest.config.js
+tsconfig.tsbuildinfo
+
+# Exclude build artifacts
+dist
+lib
+**/lib
+**/*.js.map
+**/*.d.ts.map
+
+# Exclude documentation and other non-essential files
+docs
+*.md
+LICENSE*
+CONTRIBUTING*
+CODE_OF_CONDUCT*
+SECURITY*

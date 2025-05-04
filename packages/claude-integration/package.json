@@ -1,0 +1,58 @@
+{
+  "name": "@codevibeai/claude-integration",
+  "version": "0.1.0",
+  "description": "Claude AI integration for CodeVibeAI",
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeVibeAI/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeVibeAI/theia/issues"
+  },
+  "homepage": "https://github.com/CodeVibeAI/theia",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "1.42.0",
+    "@codevibeai/core": "0.1.0",
+    "axios": "^1.6.0",
+    "keytar": "^7.9.0",
+    "uuid": "^9.0.0",
+    "async-mutex": "^0.4.0",
+    "node-cache": "^5.1.2",
+    "proper-lockfile": "^4.1.2"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "~4.5.5",
+    "chai": "^4.3.7",
+    "sinon": "^15.0.1",
+    "sinon-chai": "^3.7.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "mocha --require ts-node/register 'src/node/test/**/*.spec.ts'",
+    "test:coverage": "nyc --reporter=lcov --reporter=text mocha --require ts-node/register 'src/node/test/**/*.spec.ts'"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/codevibeai-claude-integration-frontend-module",
+      "backend": "lib/node/codevibeai-claude-integration-backend-module"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

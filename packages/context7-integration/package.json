@@ -1,0 +1,53 @@
+{
+  "name": "@codevibeai/context7-integration",
+  "version": "0.1.0",
+  "description": "Context7 integration for code understanding in CodeVibeAI",
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeVibeAI/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeVibeAI/theia/issues"
+  },
+  "homepage": "https://github.com/CodeVibeAI/theia",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "1.42.0",
+    "@theia/editor": "1.42.0",
+    "@theia/workspace": "1.42.0",
+    "@theia/languages": "1.42.0",
+    "@theia/filesystem": "1.42.0",
+    "@theia/monaco": "1.42.0",
+    "@theia/preferences": "1.42.0",
+    "@codevibeai/core": "0.1.0",
+    "axios": "^1.6.0",
+    "keytar": "^7.9.0",
+    "throttle-debounce": "^5.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "~4.5.5"
+  },
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/context7-frontend-module",
+      "backend": "lib/node/context7-backend-module"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
